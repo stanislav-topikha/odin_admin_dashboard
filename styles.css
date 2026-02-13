@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: 150px 1fr;
+  grid-template-rows: min-content 1fr;
 }
 
 .sidebar {
@@ -61,8 +61,11 @@ body {
 }
 
 header {
-  padding: 20px;
+  padding: 20px 40px;
   box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 header .top {
@@ -71,16 +74,54 @@ header .top {
   align-items: center;
 }
 
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#notifications {
+  background: no-repeat url(./icons/bell.svg) ;
+  height: 25px;
+  aspect-ratio: 1/1;
+  border: none;
+  cursor: pointer;
+}
+
 search {
   display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 search input {
   width: 35vw;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(226, 231, 238);
 }
 
 header img {
-  width: 50px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
+}
+
+.top img {
+  height: 50px;
+}
+.bottom img {
+  height: 70px;
+}
+
+header .bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bottom .actions {
+  margin-left: auto;
+  display: flex;
+  gap: 40px;
 }
