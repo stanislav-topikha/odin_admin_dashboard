@@ -143,3 +143,42 @@ header .bottom {
   font-weight: inherit;
   cursor: pointer;
 }
+
+main {
+  background-color: rgb(226	231	238	);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.news {
+  grid-column: 2/3;
+}
+.news .content {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.news .content p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trends {
+  grid-column: 2/3;
+}
+.trends>.content>.user {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+}
+
+.trends>.content>.user>img {
+  grid-column: span 1;
+  grid-row: span 2;
+  width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
